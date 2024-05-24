@@ -12,6 +12,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Print Working Directory
+      run: pwd
+
+    - name: List Files in Directory
+      run: ls -al
+      working-directory: 22_DockerizingOurApp/rest-with-spring-boot-and-java-erudio
+
     - name: Login to Docker hub
       uses: docker/login-action@v3.1.0
       with:
